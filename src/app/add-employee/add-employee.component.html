@@ -1,0 +1,35 @@
+<div id="login-box">
+  <div class="left">
+    <h1><b>Create Account</b></h1>
+  <form>
+    <label for="customer-id">Customer ID </label>
+    <input id="customerID" [(ngModel)]="user.customerID" type="text" >
+    <label for="customer-name">Name</label>
+    <input id="customerName" type="text" [(ngModel)]="user.customerNAME">
+    <label for="customer-dob">Date of Birth</label>
+    <input id="customerDob" type="date" [(ngModel)]="user.customerDOB">
+    <label for="customer-email">Email </label>
+    <input id="CustomerEmail" type="email" [(ngModel)]="user.customerEMAIL">
+    <label for="customer-accno">Account number </label>
+    <input id="customerAcc" type="text" [(ngModel)]="user.customerACC">
+        <label for="customer-date-of-opening">Date of opening</label><br>
+    <input id="CustomerDoo" type="date"  [(ngModel)]="user.customerDOO">
+    <label  for="accType">Account Type</label><br><br>
+    <label  for="savings">Savings</label>
+<input id="saving" type="radio"  value="Savings"   [(ngModel)]="user.customerACCTYPE">&nbsp;&nbsp;
+<label for="current">Current</label>
+<input id="current" type="radio"  value="Current"  [(ngModel)]="user.customerACCTYPE">
+<br />
+    <label for="customer-balance">Balance</label>
+    <input id="CustomerB" type="number" [(ngModel)]="user.customerBALANCE">
+    
+    <label for="password">Password </label>
+    <input id="password" type="password" required [(ngModel)]="user.customerPASS">
+    <button class="btn btn-success" (click)="createAccount()">Create</button>
+ 
+  
+    </form>
+  </div>
+
+</div>
+  
