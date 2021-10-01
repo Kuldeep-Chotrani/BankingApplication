@@ -1,0 +1,58 @@
+<div id="trans-box">
+  <div class="left">
+    <h1>Select your choice</h1>
+    <button (click)=openWithdraw() class="btn btn-primary">
+      Withdraw
+    </button>
+    <button (click)=openDeposit() class="btn btn-primary">
+      Deposit
+    </button>
+    <button (click)=openSummary() class="btn btn-primary">
+      Summary
+    </button>
+    <br>
+    <hr>
+    <div *ngIf = "withdrawl">
+      <form>
+        <div class="form-group">
+          <label for="name">Amount</label>
+          <input type="text" [(ngModel)]="user.balance"  name="amount" class="form-control"
+           id="balance">
+        </div>
+      
+        <div class="form-group">
+          <label for="name">Account number</label>
+          <input type ="text" [(ngModel)]="user.acc_num" name="accnum" class="form-control" id="accnum">
+        </div>
+        <button  class="btn btn-success" (click) = "withDraw()">
+          Withdraw
+        </button>
+        </form>
+    </div>
+    <div *ngIf = "deposit">
+      <form>
+        <div class="form-group">
+          <label for="name">Amount</label>
+          <input type="text" [(ngModel)]="user.balance"  name="custId" class="form-control"
+           id="balance">
+        </div>
+      
+        <div class="form-group">
+          <label for="name">Account number</label>
+          <input type ="text" [(ngModel)]="user.acc_num" name="name" class="form-control" id="accnum">
+        </div>
+        <button  class="btn btn-success" (click) = "depositAmount()">
+          Deposit
+        </button>
+        </form>
+    </div>
+    <div *ngIf = "summary">
+      Date from : <input type="date" name="start-date" [(ngModel)]="start-date">
+      Date to : <input type="date" name="end-date" [(ngModel)]="end-date">
+      <button  class="btn btn-success">
+        Request
+      </button>
+    </div>
+
+  </div>
+  </div>

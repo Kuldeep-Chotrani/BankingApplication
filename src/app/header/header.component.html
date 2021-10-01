@@ -5,8 +5,8 @@
   
   <ul class="navbar-nav">
     <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/addaccount" class="nav-link">Add Account</a></li>
-    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addaccount" class="nav-link">Transaction</a></li>
-    <li><a *ngIf ="loginService.isUserAdmin()" routerLink="/viewEmployees" class="nav-link">View details</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/transaction" class="nav-link">Transaction</a></li>
+    <li><a *ngIf ="loginService.isUserAdmin()" routerLink="/viewDetails" class="nav-link">View details</a></li>
     <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
     <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
  

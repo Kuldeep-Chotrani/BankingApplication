@@ -10,14 +10,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private loginService:AuthenticationService){ }
   ngOnInit() {
-    let adminRights = false;
-    let role = sessionStorage.getItem('role')
-    if(role === 'admin')
-    adminRights = true;
-    else
-    adminRights = false;
-    console.log(adminRights);
-    console.log(this.loginService)
+
   }
 
 }

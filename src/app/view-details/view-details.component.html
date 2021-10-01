@@ -1,0 +1,77 @@
+<div id="trans-box">
+  <div class="left">
+    <h1>Select your choice</h1>
+    <button (click)=openCustomers() class="btn btn-primary">
+      Customers
+    </button>
+    <button (click)=openAccounts() class="btn btn-primary">
+      Accounts
+    </button>
+    <button (click)=openBanking() class="btn btn-primary">
+     Banking details
+    </button>
+    <br>
+<div class="col-md-6" *ngIf = "customers">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>CID</th>
+    <th>CName</th>
+    <th>CEmail</th>
+    <th>CDOB</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let account of accounts">
+          <td>{{account.custid}}</td>
+          <td>{{account.cname}}</td>
+          <td>{{account.mail_id}}</td>
+          <td>{{account.dob}}</td>
+          <td><button class="btn btn-danger"> Delete </button></td>
+          </tr>
+  </tbody>
+    </table>
+</div><div class="col-md-6" *ngIf = "account">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>AccNumber</th>
+    <th>CID</th>
+    <th>Balance</th>
+    <th>AccType</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let account of accounts">
+          <td>{{account.acct_num}}</td>
+          <td>{{account.custid}}</td>
+          <td>{{account.bal}}</td>
+          <td>{{account.acctype}}</td>
+          <td><button class="btn btn-danger"> Delete </button></td>
+          </tr>
+  </tbody>
+    </table>
+</div>
+<div class="col-md-6" *ngIf = "banking">
+  <table class="table table-striped">
+  <thead>
+  <tr>
+    <th>TID</th>
+    <th>AccNumber</th>
+    <th>Amount</th>
+    <th>DateOfTran</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let account of accounts">
+          <td>{{account.trn_num}}</td>
+          <td>{{account.acc_num}}</td>
+          <td>{{account.trn_num}}</td>
+          <td>{{account.dateoftrn}}</td>
+          <td><button class="btn btn-danger"> Delete</button></td>
+          </tr>
+  </tbody>
+    </table>
+</div>
+</div>
+  </div>
